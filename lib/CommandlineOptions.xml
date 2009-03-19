@@ -1,0 +1,37 @@
+<jsap>
+	<parameters>
+		<switch>
+			<id>verbose</id>
+			<shortFlag>v</shortFlag>
+			<longFlag>verbose</longFlag>
+			<help>Requests verbose output.</help>
+		</switch>
+
+		<switch>
+			<id>help</id>
+			<shortFlag>h</shortFlag>
+			<longFlag>help</longFlag>
+			<help>Display this help.</help>
+		</switch>
+
+		<flaggedOption>
+			<id>lexicon</id>
+			<stringParser>
+				<classname>FileStringParser</classname>
+			</stringParser>
+			<required>true</required>
+			<shortFlag>l</shortFlag>
+			<longFlag>lexicon</longFlag>
+			<help>Path to the lexicon that is going to be used.</help>
+		</flaggedOption>
+		<unflaggedOption>
+			<id>sentence</id>
+			<stringParser>
+				<classname>StringStringParser</classname>
+			</stringParser>
+
+			<help>Sentence to be parsed.</help>
+			<greedy>true</greedy>
+		</unflaggedOption>
+	</parameters>
+</jsap>

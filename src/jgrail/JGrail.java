@@ -8,6 +8,7 @@ import java.util.List;
 
 import jgrail.grail.Grail;
 import jgrail.grail.Grail2;
+import jgrail.gui.ParserGUI;
 import jgrail.lexicon.Lexicon;
 import jgrail.lexicon.LexiconFactory;
 import jgrail.sentence.Sentence;
@@ -21,12 +22,14 @@ import com.martiansoftware.jsap.JSAPResult;
 public class JGrail {
 	private JSAPResult config;
 	private Grail grail;
+	private Lexicon lexicon = new Lexicon();
 
 	public static void main(String[] args) throws JSAPException, MalformedURLException, IOException {
 		JGrail jg = new JGrail();
 		jg.setArguments(args);
 		jg.init();
 		jg.run();
+		ParserGUI x1 = new ParserGUI(jg);
 	}
 
 	private void init() {
@@ -35,14 +38,14 @@ public class JGrail {
 		
 		if(!config.contains("lexicon"))
 		{
-			//TODO: some grapical things
+			lexicon = new Lexicon();
 		} 
 		else if (config.contains("lexicon"))
 		{
 			try {
-				Lexicon l = LexiconFactory.parseEasyLexicon(config.getFile("lexicon"));
+				lexicon = LexiconFactory.parseEasyLexicon(lexicon, config.getFile("lexicon"));
 				//grail.init();
-				grail.loadLexicon(l);
+				grail.loadLexicon(lexicon);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -97,5 +100,9 @@ public class JGrail {
             System.err.println(jsap.getHelp());
             System.exit(1);
 		} 
+	}
+
+	public Lexicon getLexicon() {
+		return lexicon;
 	}
 }

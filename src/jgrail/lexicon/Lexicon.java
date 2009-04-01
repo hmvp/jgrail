@@ -2,8 +2,10 @@ package jgrail.lexicon;
 
 import java.io.File;
 import java.util.Hashtable;
+import java.util.Observable;
+import java.util.Set;
 
-public class Lexicon {
+public class Lexicon extends Observable{
 	
 	Hashtable<String, Lexeme> lexemes = new Hashtable<String, Lexeme>();
 	Hashtable<String, Macro> macros = new Hashtable<String, Macro>();
@@ -17,18 +19,22 @@ public class Lexicon {
 	
 	public Lexicon(File file) {
 		// TODO Auto-generated constructor stub
+		notifyObservers();
 	}
 
 	public void addLexeme(Lexeme lm) {
 		lexemes.put(lm.name(), lm);
+		notifyObservers();
 	}
 
 	public void addMacro(Macro macro) {
-		macros.put(macro.name(), macro);		
+		macros.put(macro.name(), macro);
+		notifyObservers();
 	}
 	
 	public void addPostulate(Postulate post) {
-		postulates.put(post.name(), post);		
+		postulates.put(post.name(), post);	
+		notifyObservers();
 	}
 
 	public boolean containsLexeme(String word) {
@@ -55,6 +61,11 @@ public class Lexicon {
 		
 		
 		return sb.toString();
+	}
+	
+	public Set<String> getLexemes()
+	{
+		return lexemes.keySet();
 	}
 	
 }

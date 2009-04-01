@@ -4,7 +4,7 @@ package jgrail.lexicon;
 public class Lexeme {
 	private String word;
 	private SemanticClause sem;
-	private SyntaxClause syn;
+	private SyntacticClause syn;
 	//private PhoneticClause phon;
 
 	
@@ -26,7 +26,7 @@ public class Lexeme {
 	 * @param syn
 	 * @param sem
 	 */
-	public Lexeme(String word, SyntaxClause syn, SemanticClause sem) {
+	public Lexeme(String word, SyntacticClause syn, SemanticClause sem) {
 		this.word = word;
 		this.sem = sem;
 		this.syn = syn;
@@ -57,7 +57,7 @@ public class Lexeme {
 	/**
 	 * @return the syn
 	 */
-	public SyntaxClause getSyn() {
+	public SyntacticClause getSyn() {
 		return syn;
 	}
 	

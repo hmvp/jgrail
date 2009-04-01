@@ -3,9 +3,9 @@ package jgrail.lexicon;
 public class Macro {
 
 	private String word;
-	private SyntaxClause syn;
+	private SyntacticClause syn;
 
-	public Macro(String word, SyntaxClause syn) {
+	public Macro(String word, SyntacticClause syn) {
 		this.word = word;
 		this.syn = syn;
 	}
@@ -20,7 +20,7 @@ public class Macro {
 	/**
 	 * @return the syn
 	 */
-	public SyntaxClause getSyn() {
+	public SyntacticClause getSyn() {
 		return syn;
 	}
 

@@ -1,18 +1,18 @@
 package jgrail.sentence;
 
-import jgrail.lexicon.SyntaxClause;
+import jgrail.lexicon.SyntacticClause;
 
 public class Sentence {
 	private String parsedSentence;
 	private String[] tokens;
 	private String originalSentence;
-	private SyntaxClause formula;
+	private SyntacticClause formula;
 	
 	/**
 	 * Construct a new sentence from a string
 	 * @param sentence
 	 */
-	protected Sentence(String[] tokens, String originalSentence, SyntaxClause formula){
+	protected Sentence(String[] tokens, String originalSentence, SyntacticClause formula){
 		this.tokens = tokens;
 		this.originalSentence = originalSentence;
 		this.formula = formula;
@@ -43,7 +43,7 @@ public class Sentence {
 		return parsedSentence;
 	}
 
-	public SyntaxClause getFormula() {
+	public SyntacticClause getFormula() {
 		return formula;
 	}
 

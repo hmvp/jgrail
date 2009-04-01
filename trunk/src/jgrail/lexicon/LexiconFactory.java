@@ -10,9 +10,8 @@ import jpl.Term;
 
 public class LexiconFactory {
 	@SuppressWarnings("unchecked")
-	public static Lexicon parseEasyLexicon(File file) throws FileNotFoundException
+	public static Lexicon parseEasyLexicon(Lexicon l, File file) throws FileNotFoundException
 	{
-		Lexicon l = new Lexicon();
 		Query q = new Query("['lib/inputcat.pl'],['"+file.getAbsolutePath()+"'].");
 		q.hasSolution();
 		
@@ -20,7 +19,7 @@ public class LexiconFactory {
 		Hashtable<String,Term>[] lexemes = Query.allSolutions("lex(Word,Syn,Sem)");
 		for(Hashtable<String,Term> lexeme : lexemes)
 		{
-			SyntaxClause syn = SyntacticClauseFactory.parseEasyLexicon(lexeme.get("Syn"));
+			SyntacticClause syn = SyntacticClauseFactory.parseEasyLexicon(lexeme.get("Syn"));
 			SemanticClause sem = SemanticClauseFactory.parseEasyLexicon(lexeme.get("Sem"));
 			Lexeme lm = new Lexeme(lexeme.get("Word").toString(), syn, sem);
 			l.addLexeme(lm);
@@ -29,7 +28,7 @@ public class LexiconFactory {
 		Hashtable<String,Term>[] macros = Query.allSolutions("macro(Name,Syn)");
 		for(Hashtable<String,Term> macro : macros)
 		{
-			SyntaxClause syn = SyntacticClauseFactory.parseEasyLexicon(macro.get("Syn"));
+			SyntacticClause syn = SyntacticClauseFactory.parseEasyLexicon(macro.get("Syn"));
 			Macro mc = new Macro(macro.get("Name").toString(), syn);
 			l.addMacro(mc);
 		}

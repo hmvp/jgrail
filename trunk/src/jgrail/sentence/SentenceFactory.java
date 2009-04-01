@@ -5,9 +5,10 @@ import java.io.StreamTokenizer;
 import java.io.StringReader;
 import java.util.ArrayList;
 
-import jgrail.lexicon.SyntaxClause;
+import jgrail.lexicon.SyntacticClause;
+import jgrail.lexicon.SyntacticClauseFactory;
 
-import jpl.Atom;
+import jgrail.lexicon.SyntacticClause;
 
 public class SentenceFactory {
 	
@@ -29,7 +30,7 @@ public class SentenceFactory {
 			e.printStackTrace();
 		}
 		
-		return new Sentence(list.toArray(new String[list.size()]), string, new SyntaxClause(new Atom("np")));
+		return new Sentence(list.toArray(new String[list.size()]), string, SyntacticClauseFactory.simpleClause("np"));
 		
 	}
 

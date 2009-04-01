@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.5.0_16" class="java.beans.XMLDecoder"> 
+ <object class="buoy.widget.BFrame"> 
+  <void property="bounds"> 
+   <object class="java.awt.Rectangle"> 
+    <int>821</int> 
+    <int>45</int> 
+    <int>400</int> 
+    <int>237</int> 
+   </object> 
+  </void> 
+  <void property="content"> 
+   <object class="buoy.widget.BorderContainer"> 
+    <void property="defaultLayout"> 
+     <void property="insets"> 
+      <object class="java.awt.Insets"> 
+       <int>0</int> 
+       <int>0</int> 
+       <int>0</int> 
+       <int>0</int> 
+      </object> 
+     </void> 
+     <void property="padding"> 
+      <object class="java.awt.Dimension"> 
+       <int>0</int> 
+       <int>0</int> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="name"> 
+     <string>BorderContainer2</string> 
+    </void> 
+    <void id="CUIAquaFonts$DerivedUIResourceFont0" property="font"/> 
+    <void method="add"> 
+     <object class="buoy.widget.BTabbedPane"> 
+      <void method="add"> 
+       <object class="buoy.widget.BSplitPane"> 
+        <void property="dividerLocation"> 
+         <int>37</int> 
+        </void> 
+        <void property="font"> 
+         <object idref="CUIAquaFonts$DerivedUIResourceFont0"/> 
+        </void> 
+        <void property="name"> 
+         <string>SplitPane1</string> 
+        </void> 
+        <void method="add"> 
+         <object class="buoy.widget.BList"> 
+          <array class="java.lang.Object" length="4"> 
+           <void index="0"> 
+            <string>Alice</string> 
+           </void> 
+           <void index="1"> 
+            <string>Bob</string> 
+           </void> 
+           <void index="2"> 
+            <string>sees</string> 
+           </void> 
+           <void index="3"> 
+            <string>wants</string> 
+           </void> 
+          </array> 
+          <void property="name"> 
+           <string>Words</string> 
+          </void> 
+         </object> 
+         <int>0</int> 
+        </void> 
+        <void method="add"> 
+         <object class="buoy.widget.BorderContainer"> 
+          <void property="defaultLayout"> 
+           <void property="insets"> 
+            <object class="java.awt.Insets"> 
+             <int>0</int> 
+             <int>0</int> 
+             <int>0</int> 
+             <int>0</int> 
+            </object> 
+           </void> 
+           <void property="padding"> 
+            <object class="java.awt.Dimension"> 
+             <int>0</int> 
+             <int>0</int> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="name"> 
+           <string>BorderContainer5</string> 
+          </void> 
+         </object> 
+         <int>1</int> 
+        </void> 
+       </object> 
+       <string>Lexicon</string> 
+       <null/> 
+      </void> 
+      <void method="add"> 
+       <object class="buoy.widget.BSplitPane"> 
+        <void property="dividerLocation"> 
+         <int>2</int> 
+        </void> 
+        <void property="font"> 
+         <object idref="CUIAquaFonts$DerivedUIResourceFont0"/> 
+        </void> 
+        <void property="name"> 
+         <string>SplitPane2</string> 
+        </void> 
+        <void method="add"> 
+         <object class="buoy.widget.BList"> 
+          <array class="java.lang.Object" length="0"/> 
+          <void property="name"> 
+           <string>List1</string> 
+          </void> 
+         </object> 
+         <int>0</int> 
+        </void> 
+        <void method="add"> 
+         <object class="buoy.widget.BScrollPane"> 
+          <void property="content"> 
+           <object class="buoy.widget.BLabel"> 
+            <void property="name"> 
+             <string>Label3</string> 
+            </void> 
+            <void property="text"> 
+             <string>Label3</string> 
+            </void> 
+           </object> 
+          </void> 
+          <void property="name"> 
+           <string>ScrollPane1</string> 
+          </void> 
+         </object> 
+         <int>1</int> 
+        </void> 
+       </object> 
+       <string>Sentences</string> 
+       <null/> 
+      </void> 
+      <void property="name"> 
+       <string>Main</string> 
+      </void> 
+      <void property="selectedTab"> 
+       <int>1</int> 
+      </void> 
+     </object> 
+     <object class="buoy.widget.BorderContainer" field="CENTER"/> 
+     <null/> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="font"> 
+   <object class="java.awt.Font"> 
+    <string>Lucida Grande</string> 
+    <int>0</int> 
+    <int>13</int> 
+   </object> 
+  </void> 
+  <void property="icon"> 
+   <object class="javax.swing.ImageIcon"> 
+    <string>1431.jpg</string> 
+   </object> 
+  </void> 
+  <void property="menuBar"> 
+   <object class="buoy.widget.BMenuBar"> 
+    <void method="add"> 
+     <object class="buoy.widget.BMenu"> 
+      <void method="add"> 
+       <object class="buoy.widget.BMenuItem"> 
+        <void property="actionCommand"> 
+         <string>Open</string> 
+        </void> 
+        <void property="name"> 
+         <string>Open</string> 
+        </void> 
+        <void property="text"> 
+         <string>Open</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="buoy.widget.BMenuItem"> 
+        <void property="actionCommand"> 
+         <string>Save</string> 
+        </void> 
+        <void property="name"> 
+         <string>Save</string> 
+        </void> 
+        <void property="text"> 
+         <string>Save</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="name"> 
+       <string>File</string> 
+      </void> 
+      <void property="text"> 
+       <string>File</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="name"> 
+     <string>Menu</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="name"> 
+   <string>frame3</string> 
+  </void> 
+  <void property="title"> 
+   <string>JGrail</string> 
+  </void> 
+  <void property="visible"> 
+   <boolean>true</boolean> 
+  </void> 
+ </object> 
+</java> 

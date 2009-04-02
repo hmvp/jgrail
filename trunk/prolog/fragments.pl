@@ -166,7 +166,7 @@ split_num([X|Xs],N0,Ys,Zs) :-
 
 
 init :-
-	get_environment_variable('GRAIL_FRAGMENTS_DIR',  '../fragments', RawFragmentDir),
+	get_environment_variable('GRAIL_FRAGMENTS_DIR',  '', RawFragmentDir),
 	canonicalize_path(RawFragmentDir, FragmentDir),
 	assert(fragment_dir(FragmentDir)).
 

@@ -76,7 +76,7 @@ load_fragment(Name) :-
 % ---------------------------------------------------------------------
 
 load_output_module(NameSuffix) :-
-	atom_concat('output_', NameSuffix, ModuleName),
+	atom_concat('prolog/output_', NameSuffix, ModuleName),
 	use_module(ModuleName),
 	retractall('active output module'(_)),
 	assert('active output module'(ModuleName)).
